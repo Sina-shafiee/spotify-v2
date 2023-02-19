@@ -1,12 +1,16 @@
 import { Outlet } from 'react-router-dom';
 
 import Sidebar from './Sidebar/Sidebar';
+import Header from './Header/Header';
 
 const HomeLayout = () => {
   return (
-    <div className='flex gap-4 h-screen'>
+    <div className='flex h-screen overflow-hidden'>
       <Sidebar />
-      <Outlet />
+      <div className='h-full w-full flex flex-col bg-[#121212] text-gray-50'>
+        <Header />
+        <Outlet />
+      </div>
     </div>
   );
 };

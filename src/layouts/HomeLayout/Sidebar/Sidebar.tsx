@@ -14,15 +14,12 @@ const footerPages = [
   { title: 'privacy center', to: '#', id: 2 },
   { title: 'cookie setting', to: '#', id: 4 },
   { title: 'about ads', to: '#', id: 3 },
-  { title: 'cookies', to: '#', id: 3 }
+  { title: 'cookies', to: '#', id: 9 }
 ];
 
 const Sidebar = () => {
   return (
-    <aside
-      className={`w-[270px] bg-[#000] text-gray-50 h-full 
-      `}
-    >
+    <aside className={`w-[270px] bg-[#000] text-gray-50 h-full`}>
       <nav className='p-6 flex flex-col h-full'>
         <section className='flex items-center gap-1 text-2xl font-semibold'>
           <BsSpotify className='w-10 h-10' /> Spotify
