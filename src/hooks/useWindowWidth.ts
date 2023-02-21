@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Width } from './useWindowWidth.types';
+import { Width } from './hooks.types';
 
 function useWindowWidth(): Width {
   const [windowSize, setWindowSize] = useState<Width>({ width: undefined });

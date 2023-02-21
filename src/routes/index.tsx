@@ -13,8 +13,8 @@ const AppRoutes = () => {
     {
       element: <MainLayout />,
       children: [
-        { path: '/', element: <Main />, key: 'main' }, // add key prop
-        { path: '*', element: <NotFound />, key: 'not-found' } // add key prop
+        { path: '/', element: <Main />, key: 'main' },
+        { path: '*', element: <NotFound />, key: 'not-found' }
       ]
     }
   ];
@@ -28,8 +28,8 @@ const AppRoutes = () => {
       ),
       path: '/home/*',
       children: [
-        { index: true, element: <Home />, key: 'home' }, // add key prop
-        { path: 'bye', element: <Bye />, key: 'bye' } // add key prop
+        { index: true, element: <Home />, key: 'home' },
+        { path: 'bye', element: <Bye />, key: 'bye' }
       ]
     }
   ];
