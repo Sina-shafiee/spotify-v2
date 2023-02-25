@@ -16,3 +16,4 @@ export type AppDispatch = typeof store.dispatch;
 
 export { setToken } from './auth/authSlice';
 export { useGetTokenMutation } from './auth/authApi';
+export { useNewReleaseQuery, useTopTracksQuery } from './music/musicApi';

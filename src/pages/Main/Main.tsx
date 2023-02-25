@@ -1,32 +1,35 @@
 import { useNavigate } from 'react-router-dom';
 import { useGetTokenMutation } from '../../redux';
 
-// import homeBg from '../../assets/images/home-bg.jpg';
+import HomeBg from '../../assets/images/home-bg.jpg';
 
 export const Main = () => {
   const navigate = useNavigate();
   const [login] = useGetTokenMutation();
 
   const handleLogin = async () => {
-    await login().unwrap();
-    navigate('/home');
+    try {
+      await login().unwrap();
+      navigate('/home');
+    } catch (error) {
+      console.log('error from main page ', error);
+    }
   };
 
   return (
-    <div className=' h-screen text-gray-50 overflow-hidden '>
-      <div
-        className={`h-full bg-no-repeat bg-cover bg-top w-full bg-[url('https://i.ytimg.com/vi/MJt_Z11Ug8E/maxresdefault.jpg')]`}
+    <main className=' h-screen text-gray-50 overflow-hidden '>
+      <section
+        className={`h-full relative bg-no-repeat before:absolute before:top-0 before:left-0 b bg-cover bg-center before:w-full before:h-full before:bg-gradient-to-bl before:from-black before:to-[#443b3b] before:opacity-60 w-full flex flex-col items-center justify-center gap-4`}
+        style={{ backgroundImage: `url(${HomeBg})` }}
       >
-        <div className='bg-[#121212] h-full bg-opacity-95 flex flex-col items-center justify-center gap-4'>
-          <h2>Welcome to spotify Clone</h2>
-          <button
-            className='btn bg-gray-50 text-black rounded-2xl'
-            onClick={handleLogin}
-          >
-            Login
-          </button>
-        </div>
-      </div>
-    </div>
+        <h2 className='text-2xl z-20'>Welcome to spotify Clone</h2>
+        <button
+          className='btn bg-gray-50 z-20 px-12 text-black rounded-2xl'
+          onClick={handleLogin}
+        >
+          Login
+        </button>
+      </section>
+    </main>
   );
 };

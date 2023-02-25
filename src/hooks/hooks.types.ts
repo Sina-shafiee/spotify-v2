@@ -1,1 +1,1 @@
-export type Width = { width: number | undefined };
+export type Width = { width: number };

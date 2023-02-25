@@ -23,7 +23,6 @@ export const authApi = api.injectEndpoints({
           const { data } = await queryFulfilled;
           // on mutation success
           dispatch(setToken(data.access_token));
-          console.log('data received', data);
         } catch (err) {
           // on mutation error
           console.error('Error from auth api', err);

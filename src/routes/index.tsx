@@ -9,7 +9,7 @@ import { Bye, Home } from '../pages/Home';
 import ProtectedRoute from './ProtectedRoutes';
 
 const AppRoutes = () => {
-  let MainRoutes = [
+  const MainRoutes = [
     {
       element: <MainLayout />,
       children: [
@@ -29,7 +29,7 @@ const AppRoutes = () => {
       path: '/home/*',
       children: [
         { index: true, element: <Home />, key: 'home' },
-        { path: 'bye', element: <Bye />, key: 'bye' }
+        { path: 'album/:id', element: <Bye />, key: 'bye' }
       ]
     }
   ];

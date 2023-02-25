@@ -2,6 +2,7 @@ import { BsSpotify } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
 
 import { HomeIcon, SearchIcon, TopRatedIcon } from './icons';
+import { SideBarProps } from './Sidebar.types';
 
 const menuItems = [
   { title: 'Home', icon: HomeIcon, id: 1, to: '/home' },
@@ -13,13 +14,18 @@ const footerPages = [
   { title: 'legal', to: '#', id: 1 },
   { title: 'privacy center', to: '#', id: 2 },
   { title: 'cookie setting', to: '#', id: 4 },
-  { title: 'about ads', to: '#', id: 3 },
-  { title: 'cookies', to: '#', id: 9 }
+  { title: 'about ads', to: '#', id: 3 }
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ screenWidth: width, isOpen }: SideBarProps) => {
   return (
-    <aside className={`w-[270px] bg-[#000] text-gray-50 h-full`}>
+    <aside
+      className={`w-[240px] sm:min-w-[270px] z-20 ${
+        width < 800 ? 'absolute' : null
+      } ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      } bg-[#000] text-gray-50 h-full transition-transform duration-300`}
+    >
       <nav className='p-6 flex flex-col h-full'>
         <section className='flex items-center gap-1 text-2xl font-semibold'>
           <BsSpotify className='w-10 h-10' /> Spotify
