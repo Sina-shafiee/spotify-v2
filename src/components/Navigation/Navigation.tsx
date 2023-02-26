@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight } from './icons';
 export const Navigation = () => {
   const navigate = useNavigate();
   return (
-    <section className='flex gap-2 sticky top-0 left-0'>
+    <section className='flex gap-2 text-white sticky top-0 left-0'>
       <button
         className='p-2 inline-block rounded-full bg-black'
         onClick={() => navigate(-1)}

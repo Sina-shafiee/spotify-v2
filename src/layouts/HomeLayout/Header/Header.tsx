@@ -1,7 +1,10 @@
+import { useEffect, useRef } from 'react';
+
 import { useSelector } from 'react-redux';
-import { Navigation } from '../../../components';
 import { RootState } from '../../../redux';
 import { HeaderProps } from './Header.types';
+
+import { Navigation } from '../../../components';
 
 const buttons = [
   { title: 'Premium', id: 1 },
@@ -10,16 +13,30 @@ const buttons = [
 ];
 
 const Header = ({ toggleSidebar }: HeaderProps) => {
-  const bgColor = useSelector(
-    (state: RootState) => state.rootReducer.theme.header.bg
-  );
+  const {
+    header: { bg: bgColor },
+    isPageScrolled
+  } = useSelector((state: RootState) => state.rootReducer.theme);
+
+  const headerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (isPageScrolled) {
+      headerRef.current!.style.backgroundColor = `rgba(${bgColor}, 0.4)`;
+    } else {
+      headerRef.current!.style.backgroundColor = `rgba(${bgColor}, 0)`;
+    }
+  }, [isPageScrolled, bgColor]);
 
   return (
-    <header className={`bg-[${bgColor}] p-5 flex justify-between items-center`}>
+    <header
+      ref={headerRef}
+      className={` p-5 flex justify-between duration-300 transition-all items-center`}
+    >
       <Navigation />
       <section className='hidden md:inline-block'>
         {buttons.map((b) => (
-          <button className='btn text-bold' key={b.id}>
+          <button className='btn font-semibold' key={b.id}>
             {b.title}
           </button>
         ))}

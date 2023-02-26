@@ -2184,6 +2184,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-helmet@^6.1.6":
+  version "6.1.6"
+  resolved "https://registry.yarnpkg.com/@types/react-helmet/-/react-helmet-6.1.6.tgz#7d1afd8cbf099616894e8240e9ef70e3c6d7506d"
+  integrity sha512-ZKcoOdW/Tg+kiUbkFCBtvDw0k3nD4HJ/h/B9yWxN4uDO8OkRksWTO+EL+z/Qu3aHTeTll3Ro0Cc/8UhwBCMG5A==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18.0.28":
   version "18.0.28"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.28.tgz#accaeb8b86f4908057ad629a26635fe641480065"
@@ -2248,6 +2255,11 @@
   integrity sha512-SBwbxYoyPIvxHbeHxTZX2Pe/74F/tX2/D3mMvzabdeJ25bBojfW0TyB8BHrbq/9zaaKICJZjLP+8r6AeZMFCuQ==
   dependencies:
     "@types/jest" "*"
+
+"@types/tinycolor2@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@types/tinycolor2/-/tinycolor2-1.4.3.tgz#ed4a0901f954b126e6a914b4839c77462d56e706"
+  integrity sha512-Kf1w9NE5HEgGxCRyIcRXR/ZYtDv0V8FVPtYHwLxl0O+maGX0erE77pQlD0gpP+/KByMZ87mOA79SjifhSB3PjQ==
 
 "@types/trusted-types@^2.0.2":
   version "2.0.3"
@@ -8932,7 +8944,7 @@ timm@^1.6.1:
   resolved "https://registry.yarnpkg.com/timm/-/timm-1.7.1.tgz#96bab60c7d45b5a10a8a4d0f0117c6b7e5aff76f"
   integrity sha512-IjZc9KIotudix8bMaBW6QvMuq64BrJWFs1+4V0lXwWGQZwH+LnX87doAYhem4caOEusRP9/g6jVDQmZ8XOk1nw==
 
-tinycolor2@^1.4.1:
+tinycolor2@^1.4.1, tinycolor2@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.6.0.tgz#f98007460169b0263b97072c5ae92484ce02d09e"
   integrity sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==

@@ -21,7 +21,7 @@ export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
 export { setToken } from './auth/authSlice';
-export { setHeaderBG } from './theme/themeSlice';
+export { setHeaderBG, toggleIsPageScrolled } from './theme/themeSlice';
 
 export { useGetTokenMutation } from './auth/authApi';
 export { useNewReleaseQuery, useTopTracksQuery } from './common/musicApi';
