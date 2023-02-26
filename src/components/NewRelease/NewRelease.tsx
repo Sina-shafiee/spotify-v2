@@ -5,7 +5,7 @@ import { List } from './List';
 import Skeleton from './skeleton';
 
 export const NewRelease = () => {
-  const token = useSelector((state: RootState) => state.auth.token);
+  const token = useSelector((state: RootState) => state.rootReducer.auth.token);
   const { data, isLoading, isError } = useNewReleaseQuery({ token });
 
   let content: React.ReactNode;
@@ -13,6 +13,7 @@ export const NewRelease = () => {
   if (isLoading) {
     content = <Skeleton />;
   }
+
   if (isError) {
     content = (
       <div className='h-[40vh] flex items-center justify-center'>
@@ -20,6 +21,7 @@ export const NewRelease = () => {
       </div>
     );
   }
+
   if (data) {
     content = <List data={data?.albums?.items} />;
   }

@@ -5,7 +5,7 @@ import { Main, NotFound } from '../pages/Main';
 import HomeLayout from '../layouts/HomeLayout';
 import MainLayout from '../layouts/MainLayout';
 
-import { Bye, Home } from '../pages/Home';
+import { Albums, Home, SingleAlbum } from '../pages/Home';
 import ProtectedRoute from './ProtectedRoutes';
 
 const AppRoutes = () => {
@@ -29,7 +29,9 @@ const AppRoutes = () => {
       path: '/home/*',
       children: [
         { index: true, element: <Home />, key: 'home' },
-        { path: 'album/:id', element: <Bye />, key: 'bye' }
+        { path: 'album', Element: <Albums />, key: 'Albums' },
+        { path: 'album/:id', element: <SingleAlbum />, key: 'singleAlbum' },
+        { path: '*', element: <NotFound />, key: 'not-found' }
       ]
     }
   ];

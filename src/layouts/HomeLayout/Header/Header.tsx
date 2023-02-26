@@ -1,4 +1,6 @@
+import { useSelector } from 'react-redux';
 import { Navigation } from '../../../components';
+import { RootState } from '../../../redux';
 import { HeaderProps } from './Header.types';
 
 const buttons = [
@@ -8,8 +10,12 @@ const buttons = [
 ];
 
 const Header = ({ toggleSidebar }: HeaderProps) => {
+  const bgColor = useSelector(
+    (state: RootState) => state.rootReducer.theme.header.bg
+  );
+
   return (
-    <header className='bg-[rgba(0,0,0,0.6)] p-5 flex justify-between items-center'>
+    <header className={`bg-[${bgColor}] p-5 flex justify-between items-center`}>
       <Navigation />
       <section className='hidden md:inline-block'>
         {buttons.map((b) => (

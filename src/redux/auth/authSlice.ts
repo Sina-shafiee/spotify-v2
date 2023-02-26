@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-export type InitialState = {
+type InitialState = {
   token: null | string;
 };
 
