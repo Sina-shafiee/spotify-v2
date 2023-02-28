@@ -1,2 +1,3 @@
 export { Home } from './Home';
-export { Bye } from './Bye';
+export { Albums } from './Album/Albums';
+export { SingleAlbum } from './Album/SingleAlbum/SingleAlbum';
