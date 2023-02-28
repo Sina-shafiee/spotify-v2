@@ -53,7 +53,7 @@ const TrackItem = ({ track, index, cover }: TrackItemProps) => {
         <p>{index}</p>
       )}
       <p className='font-semibold'>{track.name}</p>
-      <p className='text-end tracking-tighter'>
+      <p className='text-end tracking-tighter whitespace-nowrap'>
         {(track.duration_ms / 60000)
           .toFixed(2)
           .toString()

@@ -64,7 +64,7 @@ export const SingleAlbum = () => {
       <Helmet>
         <title>Spotify - {data?.name ?? 'Loading..'}</title>
       </Helmet>
-      <div className='flex gap-8 p-16 pb-0 flex-wrap'>
+      <div className='flex gap-12 p-4 md:p-16 pb-0 flex-wrap'>
         <ColorExtractor
           rgb={true}
           getColors={(colors: number[][]) => {
@@ -72,7 +72,7 @@ export const SingleAlbum = () => {
           }}
         >
           <img
-            className='h-56 rounded-md w-56'
+            className='max-h-[300px] aspect-square rounded-md max-w-[300px] w-full'
             src={data?.images[1]?.url ?? PlaceholderImage}
             alt='imm'
           />
@@ -80,7 +80,7 @@ export const SingleAlbum = () => {
 
         <div className='self-end font-semibold space-y-2'>
           <p>{data && 'Album'}</p>
-          <h2>{data?.name}</h2>
+          <h2 className='text-2xl md:text-3xl'>{data?.name}</h2>
           <p>{data?.release_date?.split('-').join(' - ')}</p>
         </div>
       </div>
