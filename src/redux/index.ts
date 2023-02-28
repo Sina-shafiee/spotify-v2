@@ -23,7 +23,7 @@ export type AppDispatch = typeof store.dispatch;
 
 export { setToken } from './auth/authSlice';
 export { setHeaderBG, toggleIsPageScrolled } from './theme/themeSlice';
-export { addToPlayList } from './playlist/playlistSlice';
+export { addToPlayList, removeTrack } from './playlist/playlistSlice';
 
 export { useGetTokenMutation } from './auth/authApi';
 export { useNewReleaseQuery, useTopTracksQuery } from './common/musicApi';

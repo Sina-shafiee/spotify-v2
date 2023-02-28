@@ -50,11 +50,15 @@ const playlistSlice = createSlice({
   initialState,
   reducers: {
     addToPlayList: (state, { payload }: AddToPlayListAction) => {
-      state.tracks.push(payload);
+      state.tracks = [payload, ...state.tracks];
+    },
+    removeTrack: (state, { payload }: { type: string; payload: string }) => {
+      const temp = state.tracks.filter((track) => track.id !== payload);
+      state.tracks = temp;
     }
   }
 });
 
-export const { addToPlayList } = playlistSlice.actions;
+export const { addToPlayList, removeTrack } = playlistSlice.actions;
 
 export default playlistSlice.reducer;

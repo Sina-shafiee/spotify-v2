@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CiPlay1 } from 'react-icons/ci';
+import { BsPlay } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { addToPlayList } from '../../../../../redux';
 
@@ -46,8 +46,8 @@ const TrackItem = ({ track, index, cover }: TrackItemProps) => {
       className='track-table px-2 py-4 rounded-sm transition-colors duration-300 hover:bg-[rgba(0,0,0,0.2)]'
     >
       {isHovered ? (
-        <button onClick={handlePlay} className='w-full text-start'>
-          <CiPlay1 />
+        <button onClick={handlePlay} className='w-full -ml-1 text-start'>
+          <BsPlay className='text-2xl' />
         </button>
       ) : (
         <p>{index}</p>
