@@ -44,7 +44,7 @@ const HomeLayout = () => {
             background: `linear-gradient(0deg, rgba(10, 10, 10, 1) 0%,rgba(${bgColor}, 0.8) 100%)`
           }}
         >
-          <Header toggleSidebar={toggleSideBar} />
+          <Header toggleSidebar={toggleSideBar} isOpen={isOpen} />
           <Outlet />
         </div>
       </div>

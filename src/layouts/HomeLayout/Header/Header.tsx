@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../../redux';
 import { HeaderProps } from './Header.types';
 
+import { IoMdClose } from 'react-icons/io';
+import { AiOutlineMenu } from 'react-icons/ai';
+
 import { Navigation } from '../../../components';
 
 const buttons = [
@@ -12,7 +15,7 @@ const buttons = [
   { title: 'Download', id: 3 }
 ];
 
-const Header = ({ toggleSidebar }: HeaderProps) => {
+const Header = ({ toggleSidebar, isOpen }: HeaderProps) => {
   const {
     header: { bg: bgColor },
     isPageScrolled
@@ -41,8 +44,8 @@ const Header = ({ toggleSidebar }: HeaderProps) => {
           </button>
         ))}
       </section>
-      <button className='md:hidden' onClick={toggleSidebar}>
-        X
+      <button className='md:hidden text-3xl' onClick={toggleSidebar}>
+        {!isOpen ? <AiOutlineMenu /> : <IoMdClose />}
       </button>
     </header>
   );
