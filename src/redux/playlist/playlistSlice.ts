@@ -19,27 +19,27 @@ type InitialState = {
 const initialState: InitialState = {
   tracks: [
     {
-      name: 'Macan band 2',
+      name: 'Begging',
       musicSrc:
-        'https://media-vip.my-pishvaz.com/musicfa/tagdl/8e401/Mastan%20-%20Ye%20Zan%20(320).mp3?st=TErM-5-mNFcP8So2OlxtnA&e=1677496905',
+        'https://ts7.tarafdari.com/contents/user35197/content-sound/glass_animals_-_heat_waves_320.mp3',
       cover:
-        'https://music-fa.com/wp-content/uploads/2022/09/Macan-Band-Music-fa.com_.jpg',
+        'https://i1.sndcdn.com/artworks-opFumb3EMod9o4vQ-A0f97w-t500x500.jpg',
+      id: '1'
+    },
+    {
+      name: 'Blinding Lights (2020)',
+      musicSrc:
+        'https://dl.musicfaz.ir/1398/12/The%20Weeknd%20-%20Blinding%20Lights_320.mp3',
+      cover:
+        'https://i1.sndcdn.com/artworks-T5KqOdidfrbpyddU-sGIJsA-t500x500.jpg',
       id: '2'
     },
     {
-      name: 'Journey',
+      name: 'Levitating',
       musicSrc:
-        'https://ts2.tarafdari.com/contents/user558662/content-sound/11._mark_eliyahu_-_journey_mahmut_orhan_remix.mp3',
+        'https://ts9.tarafdari.com/contents/user698141/content-sound/05._dua_lipa_-_levitating.mp3',
       cover:
-        'https://istanbulmusic1.xyz/wp-content/uploads/2021/12/7fef0dd53edbd3f58fe3d8cff69d7de8-6.jpg',
-      id: '23'
-    },
-    {
-      name: 'Death of me',
-      musicSrc:
-        'https://ts9.tarafdari.com/contents/user707836/content-sound/light_the_torch_-_death_of_me.mp3',
-      cover:
-        'https://ts9.tarafdari.com/contents/user707836/content-sound/unnadmed.jpg',
+        'https://i1.sndcdn.com/artworks-IeJj19bzbXIrLiE3-Foa40Q-t500x500.jpg',
       id: '3'
     }
   ]

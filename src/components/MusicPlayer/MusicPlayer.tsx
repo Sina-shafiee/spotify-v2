@@ -40,7 +40,7 @@ export const MusicPlayer = () => {
       clearPriorAudioLists
       autoPlayInitLoadPlayList
       showMiniProcessBar={false}
-      defaultVolume={0.2}
+      defaultVolume={0.4}
       toggleMode={false}
       glassBg
       mode='full'
