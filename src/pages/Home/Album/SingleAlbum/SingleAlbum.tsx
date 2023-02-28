@@ -64,7 +64,7 @@ export const SingleAlbum = () => {
       <Helmet>
         <title>Spotify - {data?.name ?? 'Loading..'}</title>
       </Helmet>
-      <div className='flex gap-12 p-4 md:p-16 pb-0 flex-wrap'>
+      <div className='flex gap-12 p-4 md:p-16 md:pb-0 flex-wrap'>
         <ColorExtractor
           rgb={true}
           getColors={(colors: number[][]) => {

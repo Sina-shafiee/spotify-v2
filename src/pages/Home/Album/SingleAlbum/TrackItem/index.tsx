@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BsPlay } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import { addToPlayList } from '../../../../../redux';
 
 export type TrackItemProps = {
@@ -26,7 +27,7 @@ const TrackItem = ({ track, index, cover }: TrackItemProps) => {
 
   const handlePlay = () => {
     console.log(track.preview_url);
-    if (!track.preview_url) return alert('No preview available');
+    if (!track.preview_url) return toast.info('No preview available');
 
     const formattedTrack = {
       id: track.id,
