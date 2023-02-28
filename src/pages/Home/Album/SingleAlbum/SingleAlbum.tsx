@@ -16,6 +16,8 @@ import {
 import { arrToStr } from '../../../../utils/arrayToRgb';
 
 import PlaceholderImage from '../../../../assets/images/placeholder.png';
+import TrackList from './TrackList';
+import Loading from './Loading';
 
 export const SingleAlbum = () => {
   const dispatch = useDispatch();
@@ -39,39 +41,55 @@ export const SingleAlbum = () => {
     const el = containerRef.current;
 
     const handleScroll = () => {
-      if (containerRef.current!.scrollTop > 100) {
+      if (containerRef.current && containerRef.current?.scrollTop > 100) {
         dispatch(toggleIsPageScrolled(true));
       } else {
         dispatch(toggleIsPageScrolled(false));
       }
     };
 
-    el!.addEventListener('scroll', handleScroll);
+    el?.addEventListener('scroll', handleScroll);
 
     return () => {
-      el!.removeEventListener('scroll', handleScroll);
+      el?.removeEventListener('scroll', handleScroll);
     };
   }, [dispatch]);
+
+  if (!data) {
+    return <Loading />;
+  }
 
   return (
     <div ref={containerRef} className={` overflow-y-auto`}>
       <Helmet>
         <title>Spotify - {data?.name ?? 'Loading..'}</title>
       </Helmet>
-      <ColorExtractor
-        rgb={true}
-        getColors={(colors: number[][]) => {
-          setColor(colors[0]);
-        }}
-      >
-        <img
-          className='h-56 rounded-md w-56 ml-20 mt-28'
-          src={data?.images[1]?.url ?? PlaceholderImage}
-          alt='imm'
-        />
-      </ColorExtractor>
+      <div className='flex gap-8 p-16 pb-0 flex-wrap'>
+        <ColorExtractor
+          rgb={true}
+          getColors={(colors: number[][]) => {
+            setColor(colors[0]);
+          }}
+        >
+          <img
+            className='h-56 rounded-md w-56'
+            src={data?.images[1]?.url ?? PlaceholderImage}
+            alt='imm'
+          />
+        </ColorExtractor>
 
-      <div className='min-h-[70vh]'></div>
+        <div className='self-end font-semibold space-y-2'>
+          <p>{data && 'Album'}</p>
+          <h2>{data?.name}</h2>
+          <p>{data?.release_date?.split('-').join(' - ')}</p>
+        </div>
+      </div>
+      <TrackList
+        tracks={data?.tracks}
+        cover={data?.images[2]?.url ?? data?.images[0].url}
+      />
+
+      <div className='min-h-[20vh]'></div>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import Skeleton from './skeleton';
 
 export const NewRelease = () => {
   const token = useSelector((state: RootState) => state.rootReducer.auth.token);
-  const { data, isLoading, isError } = useNewReleaseQuery({ token });
+  const { data, isLoading, isError, error } = useNewReleaseQuery({ token });
 
   let content: React.ReactNode;
 
@@ -16,7 +16,7 @@ export const NewRelease = () => {
 
   if (isError) {
     content = (
-      <div className='h-[40vh] flex items-center justify-center'>
+      <div className='h-[60vh] flex items-center justify-center'>
         <p>Something went wrong please try again later..</p>
       </div>
     );

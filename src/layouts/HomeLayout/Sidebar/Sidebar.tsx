@@ -10,13 +10,6 @@ const menuItems = [
   { title: 'Top Rated', icon: TopRatedIcon, id: 3, to: '/home/hi' }
 ];
 
-const footerPages = [
-  { title: 'legal', to: '#', id: 1 },
-  { title: 'privacy center', to: '#', id: 2 },
-  { title: 'cookie setting', to: '#', id: 4 },
-  { title: 'about ads', to: '#', id: 3 }
-];
-
 const Sidebar = ({ screenWidth: width, isOpen }: SideBarProps) => {
   return (
     <aside
@@ -53,16 +46,6 @@ const Sidebar = ({ screenWidth: width, isOpen }: SideBarProps) => {
             </NavLink>
           ))}
         </ul>
-        <section className='mt-auto'>
-          {footerPages.map((page) => (
-            <p
-              key={page.id}
-              className='text-xs text-gray-400 inline-block pr-3 cursor-pointer'
-            >
-              {page.title}
-            </p>
-          ))}
-        </section>
       </nav>
     </aside>
   );

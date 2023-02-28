@@ -42,6 +42,8 @@ export const Home = () => {
         <title>Spotify - home</title>
       </Helmet>
       <NewRelease />
+
+      <div className='min-h-[15vh]'></div>
     </div>
   );
 };

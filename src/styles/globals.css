@@ -35,6 +35,10 @@
   .card {
     @apply w-full p-4 bg-[#1f1f1f] hover:bg-[#2b2b2b] hover:shadow-2xl shadow-[#2b2b2b] rounded-sm transition-colors duration-300;
   }
+  .track-table {
+    @apply grid;
+    grid-template-columns: 1fr 8fr 1fr;
+  }
 }
 
 /*
