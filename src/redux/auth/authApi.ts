@@ -9,6 +9,7 @@ export const authApi = api.injectEndpoints({
         url: 'https://accounts.spotify.com/api/token',
         method: 'POST',
         headers: {
+          mode: 'no-cors',
           'Content-Type': 'application/x-www-form-urlencoded',
           Authorization:
             'Basic ' +
