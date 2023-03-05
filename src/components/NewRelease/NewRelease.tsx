@@ -6,7 +6,7 @@ import Skeleton from './skeleton';
 
 export const NewRelease = () => {
   const token = useSelector((state: RootState) => state.rootReducer.auth.token);
-  const { data, isLoading, isError, error } = useNewReleaseQuery({ token });
+  const { data, isLoading, isError } = useNewReleaseQuery({ token });
 
   let content: React.ReactNode;
 

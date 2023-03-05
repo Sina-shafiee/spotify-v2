@@ -6,15 +6,15 @@ export const authApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getToken: builder.mutation<TokenResponse, void>({
       query: () => ({
-        url: 'https://accounts.spotify.com/api/token',
+        url: 'https://cors-anywhere.herokuapp.com/https://accounts.spotify.com/api/token',
         method: 'POST',
         headers: {
-          mode: 'cors',
+          mode: 'no-cors',
           'Content-Type': 'application/x-www-form-urlencoded',
           Authorization:
             'Basic ' +
             btoa(
-              '32e39cf3bbde483aaa69da638138a5d0:7a7b42b44b514aa5a09e271f4364b86e'
+              '0b1ed6a950864dbe87c65844faa578ec:1709527a40a84462819b1c4a8d975fd5'
             )
         },
         body: 'grant_type=client_credentials'
