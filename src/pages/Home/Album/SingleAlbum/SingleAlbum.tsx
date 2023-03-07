@@ -19,7 +19,7 @@ import PlaceholderImage from '../../../../assets/images/placeholder.png';
 import TrackList from './TrackList';
 import Loading from './Loading';
 
-export const SingleAlbum = () => {
+const SingleAlbum = () => {
   const dispatch = useDispatch();
   const token = useSelector((state: RootState) => state.rootReducer.auth.token);
 
@@ -93,3 +93,5 @@ export const SingleAlbum = () => {
     </div>
   );
 };
+
+export default SingleAlbum;

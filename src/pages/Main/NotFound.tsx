@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setHeaderBG } from '../../redux';
 
-export const NotFound = () => {
+const NotFound = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setHeaderBG('0,0,0'));
@@ -24,3 +24,5 @@ export const NotFound = () => {
     </div>
   );
 };
+
+export default NotFound;
