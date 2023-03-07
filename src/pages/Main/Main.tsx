@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import HomeBg from '../../assets/images/home-bg.jpg';
 import { toast } from 'react-toastify';
 
-export const Main = () => {
+const Main = () => {
   const navigate = useNavigate();
   const [login] = useGetTokenMutation();
 
@@ -48,3 +48,4 @@ export const Main = () => {
     </main>
   );
 };
+export default Main;

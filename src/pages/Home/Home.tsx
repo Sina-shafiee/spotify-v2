@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 
 import { NewRelease } from '../../components';
 
-export const Home = () => {
+const Home = () => {
   const dispatch = useDispatch();
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -47,3 +47,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;
