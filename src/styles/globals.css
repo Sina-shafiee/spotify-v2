@@ -45,21 +45,23 @@
   custom scroll bar
 */
 
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #040a0a #121212;
-}
+@media screen and (min-width: 520px) {
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #040a0a #121212;
+  }
 
-*::-webkit-scrollbar {
-  width: 10px;
-}
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
 
-*::-webkit-scrollbar-track {
-  background: rgba(18, 18, 18, 0.1);
-}
+  *::-webkit-scrollbar-track {
+    background: rgba(18, 18, 18, 0.1);
+  }
 
-*::-webkit-scrollbar-thumb {
-  background-color: rgb(15, 51, 49);
-  border-radius: 10px;
-  border: 0px solid #ffffff;
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(15, 51, 49);
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }
 }
